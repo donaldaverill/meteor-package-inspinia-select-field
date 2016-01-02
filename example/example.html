@@ -1,0 +1,24 @@
+<head>
+  <title>Inspinia Select Field Example</title>
+</head>
+
+<body>
+  <h1>Inspinia Select Field Example!</h1>
+  Inspinia styles and Bootstrap are not set up for the example,
+  but the functionality is the same.
+  <br>
+  <br>
+  {{> formTemplate}}
+</body>
+
+<template name="formTemplate">
+  <form id="someForm">
+    {{> inspiniaSelectField
+      label='M\'s'
+      field='nameList'
+      choices=list
+      onChange=nameChanged
+      selected='edgar-martinez'
+    }}
+  </form>
+</template>

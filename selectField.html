@@ -1,0 +1,17 @@
+<template name="inspiniaSelectField">
+  {{#unless skipLabel}}
+    <label>{{label}}</label>
+  {{/unless}}
+  <select class="form-control" data-field-name="{{field}}" {{disabled}}>
+    {{#each choices}}
+      <option selected={{selected value}} value="{{value}}">{{content}}</option>
+    {{/each}}
+  </select>
+  {{#unless success}}
+    {{#if submitted}}
+      {{#if errorMessage}}
+        <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+      {{/if}}
+    {{/if}}
+  {{/unless}}
+</template>
